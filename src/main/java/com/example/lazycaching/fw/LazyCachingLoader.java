@@ -3,6 +3,11 @@ package com.example.lazycaching.fw;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
+/**
+ * @param <E> Entity
+ * @param <C> Cache
+ * @param <D> DTO
+ */
 public interface LazyCachingLoader<E, C, D> {
 
   LazyCachingLoader<E, C, D> withCache(Supplier<C> cached);
