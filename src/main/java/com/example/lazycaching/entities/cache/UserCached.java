@@ -1,6 +1,6 @@
 package com.example.lazycaching.entities.cache;
 
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 import lombok.Getter;
 import lombok.Setter;
