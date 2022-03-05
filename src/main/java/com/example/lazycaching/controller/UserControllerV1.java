@@ -2,8 +2,6 @@ package com.example.lazycaching.controller;
 
 import java.util.List;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.lazycaching.dto.UserResponse;
@@ -12,18 +10,16 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/users")
-public class UserController {
+@RequestMapping("/v1/users")
+public class UserControllerV1 implements UserOperations {
 
-  private final UserService userService;
+  private final UserService modernUserService;
 
-  @GetMapping
   public ResponseEntity<List<UserResponse>> getUsers() {
-    return ResponseEntity.ok(this.userService.getUsers());
+    return ResponseEntity.ok(this.modernUserService.getUsers());
   }
 
-  @GetMapping("/{id}")
-  public ResponseEntity<UserResponse> getByUsername(@PathVariable String id) {
-    return ResponseEntity.of(this.userService.getUserById(id));
+  public ResponseEntity<UserResponse> getByUsername(String id) {
+    return ResponseEntity.of(this.modernUserService.getUserById(id));
   }
 }

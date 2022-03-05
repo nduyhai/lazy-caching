@@ -7,3 +7,14 @@ GET http://localhost:8081/users/6d3ccc6b-65b2-4fcc-b0ab-d470fbe4d81e
 Accept: application/json
 
 ###
+
+
+GET http://localhost:8081/v1/users
+Accept: application/json
+
+###
+
+GET http://localhost:8081/v1/users/6d3ccc6b-65b2-4fcc-b0ab-d470fbe4d81e
+Accept: application/json
+
+###
