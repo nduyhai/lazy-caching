@@ -1,5 +1,6 @@
 package com.example.lazycaching.entities.cache;
 
+import javax.persistence.Id;
 import org.springframework.data.redis.core.RedisHash;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,6 +10,7 @@ import lombok.Setter;
 @Setter
 public class UserCached {
 
+  @Id
   protected String id;
   protected String username;
   protected String firstName;

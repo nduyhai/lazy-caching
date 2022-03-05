@@ -9,7 +9,7 @@ spring:
   redis:
     host: ${REDIS_URL:localhost}
     port: 6379
-
+    timeout: '2000'
 
 
 
